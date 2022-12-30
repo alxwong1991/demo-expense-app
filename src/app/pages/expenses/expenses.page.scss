@@ -1,0 +1,23 @@
+.header {
+  margin-top: 5%;
+  margin-bottom: 3rem;
+
+  p {
+    margin: 0;
+    color: #444444;
+  }
+}
+
+.item {
+  background: #eeeeee;
+  color: #444;
+  padding: 16px;
+  margin-bottom: 2px;
+  border-radius: px;
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    margin-top: 10px;
+  }
+}

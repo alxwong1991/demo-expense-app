@@ -1,0 +1,29 @@
+<ion-content class="ion-padding">
+  <div class="header">
+    <div>
+      <h1>Hello</h1>
+      <strong>{{username}}</strong>
+    </div>
+
+    <ion-button color="light" mode="ios" (click)="onLogout()">
+      <ion-icon slot="icon-only" color="danger" name="log-out"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div class="summary">
+    <strong>Your Total Expenses</strong>
+    <h1 *ngIf="loaded">{{totalExpenses|number}}</h1>
+    <ion-skeleton-text *ngIf="!loaded" animated="true"></ion-skeleton-text>
+  </div>
+
+  <div id="container">
+    <div routerLink="/expenses">
+      <ion-icon name="list"></ion-icon>
+      <strong>View Expense</strong>
+    </div>
+    <div routerLink="/add">
+      <ion-icon name="add"></ion-icon>
+      <strong>Add Expense</strong>
+    </div>
+  </div>
+</ion-content>

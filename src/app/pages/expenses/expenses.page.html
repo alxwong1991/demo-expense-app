@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Transactions</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding-vertical">
+  <ion-list lines="none">
+    <div class="item" *ngFor="let item of expenses">
+      <div>
+        <h1 class="ion-no-margin">{{item.amount|number}}</h1>
+        <p class="ion-no-margin">{{item.description}}</p>
+      </div>
+
+      <ion-buttons>
+        <ion-button color="danger" (click)="onDelete(item.id)">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-button>
+        <ion-button color="primary" [routerLink]="'/edit/' + item.id">
+          <ion-icon slot="icon-only" name="pencil"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </ion-list>
+</ion-content>

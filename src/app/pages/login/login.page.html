@@ -1,0 +1,20 @@
+<ion-content class="ion-padding">
+  <div class="header">
+    <h1>Login</h1>
+    <p>Use your email and password to login.</p>
+  </div>
+
+  <form [formGroup]="form">
+    <div>
+      <ion-label>Email</ion-label>
+      <ion-input formControlName="email" class="input" type="email" placeholder="Your Email"></ion-input>
+    </div>
+    <div>
+      <ion-label>Password</ion-label>
+      <ion-input class="input" formControlName="password" type="password" placeholder="Your Password"></ion-input>
+    </div>
+    <ion-button class="full" [disabled]="form.invalid" (click)="onLogin()" expand="block">Login</ion-button>
+  </form>
+
+  <ion-button expand="block" fill="clear" routerLink="/register">Create Account</ion-button>
+</ion-content>

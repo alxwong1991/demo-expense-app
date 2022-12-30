@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add Expense</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="header">
+    <h1>Create</h1>
+    <p>Add new expenses to your list</p>
+  </div>
+
+  <form [formGroup]="form">
+    <div>
+      <ion-label>Amount</ion-label>
+      <ion-input class="input" formControlName="amount" type="number" placeholder="Expense Amount"></ion-input>
+    </div>
+    <div>
+      <ion-label>Amount</ion-label>
+      <ion-textarea rows="5" class="input" formControlName="description" type="number" placeholder="Expense Amount">
+      </ion-textarea>
+    </div>
+    <ion-button class="full" expand="block" [disabled]="form.invalid" (click)="onSubmit()">Submit</ion-button>
+  </form>
+</ion-content>
